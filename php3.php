@@ -2,56 +2,56 @@
 //TRACCIA 1
 
 
-$password = readline("Inserisci la tua password: ");
-checkMyPass($password);
+// $password = readline("Inserisci la tua password: ");
+// checkMyPass($password);
 
 
 
-function checkMyPass($password){
-    $checkLunghezza = false;
-    $checkCapitalLetter = false;
-    $checkNumero = false;
-    $checkCarSpec = false;
+// function checkMyPass($password){
+//     $checkLunghezza = false;
+//     $checkCapitalLetter = false;
+//     $checkNumero = false;
+//     $checkCarSpec = false;
 
     
-    function checkLenght($password){
+//     function checkLenght($password){
 
-        if(strlen($password) >= 8){
-            return true;
-        }
+//         if(strlen($password) >= 8){
+//             return true;
+//         }
         
-        return false;
+//         return false;
 
-    }
+//     }
 
-    function checkUpperCaseLetter($password){
-        for ($i=0; $i < strlen($password); $i++) { 
-            if(ctype_upper($password[$i])){
-                return true;
-            }
-        }
-    }
+//     function checkUpperCaseLetter($password){
+//         for ($i=0; $i < strlen($password); $i++) { 
+//             if(ctype_upper($password[$i])){
+//                 return true;
+//             }
+//         }
+//     }
 
-    function checkNumber($password){
-        for ($i=0; $i < strlen($password); $i++) { 
-           if(ctype_alnum($password[$i])){
-                return true;
-           }
-        }
-    }
+//     function checkNumber($password){
+//         for ($i=0; $i < strlen($password); $i++) { 
+//            if(ctype_alnum($password[$i])){
+//                 return true;
+//            }
+//         }
+//     }
 
-    function checkSpecialChar($password){
-        $regex = preg_match('[@_!#$%^&*()<>?/|}{~:]', $password);
-            if ($regex){
-                return true;
-            }
-    }
+//     function checkSpecialChar($password){
+//         $regex = preg_match('[@_!#$%^&*()<>?/|}{~:]', $password);
+//             if ($regex){
+//                 return true;
+//             }
+//     }
 
 
-    $checkLunghezza = checkLenght($password);
-    $checkCapitalLetter = checkUpperCaseLetter($password);
-    $checkNumero = checkNumber($password);
-    $checkCarSpec = checkSpecialChar($password);
+//     $checkLunghezza = checkLenght($password);
+//     $checkCapitalLetter = checkUpperCaseLetter($password);
+//     $checkNumero = checkNumber($password);
+//     $checkCarSpec = checkSpecialChar($password);
    
 
 
@@ -59,66 +59,37 @@ function checkMyPass($password){
 
 
 
-    if($checkLunghezza){
-        echo "lunghezza rispettata\n";
-    }else{
-        echo "lunghezza NON rispettata\n";
-        return;
-    }
+//     if($checkLunghezza){
+//         echo "lunghezza rispettata\n";
+//     }else{
+//         echo "lunghezza NON rispettata\n";
+//         return;
+//     }
 
-    if($checkCapitalLetter){
-        echo "Maiuscola nella password, bene!\n";
-    }else{
-        echo "Manca la maiuscola nella password\n";
-        return;
-    }
+//     if($checkCapitalLetter){
+//         echo "Maiuscola nella password, bene!\n";
+//     }else{
+//         echo "Manca la maiuscola nella password\n";
+//         return;
+//     }
 
-    if($checkNumero){
-        echo "Numero nella password, bene\n";
-    }else{
-        echo "Nessun numero nella password\n";
-        return;
-    }
+//     if($checkNumero){
+//         echo "Numero nella password, bene\n";
+//     }else{
+//         echo "Nessun numero nella password\n";
+//         return;
+//     }
     
-    if($checkCarSpec){
-        echo "Carattere speciale nella password, bene\n";
-    }else{
-        echo "Nessun carattere speciale nella password\n";
-        return;
-    }
+//     if($checkCarSpec){
+//         echo "Carattere speciale nella password, bene\n";
+//     }else{
+//         echo "Nessun carattere speciale nella password\n";
+//         return;
+//     }
 
-}
+// }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+//purtroppo non riesco a fars si che il codice mi dica quando il numero non è presente in password e quando non è presente il carattere speciale
 
 
 //TRACCIA 2
